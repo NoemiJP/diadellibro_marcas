@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Día del Libro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#iniciar").click(function (event) {
+                location.href = "login.html";
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="pos-f-t">
+        <nav class="navbar  navbar-light bg-light navbar-fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Día del libro</a>
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <button type="button" class="btn btn-light" id="iniciar">Iniciar Sesión</button>
+                <button type="button" class="btn btn-light">Ayuda</button>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="audio.html">Audiolibros, postcast y canales de lectura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="iniciativa.html">Iniciativas para fomentar la lectura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="adaptacion.html">Adaptación para personas con discapacidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="donativos.html">Donativos de libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="concursos.html">Concurso de carteles, poesía, relatos
+                            cortos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="libros.html">Libros más vendidos, mejor valorados y más
+                            premiados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cafes.html">Cafés-Librerías</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="imagenes/imagen2.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagenes/imagen2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagenes/imagen2.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+        <h1>¿Por qué se celebra el 23 de abril el Día del Libro?</h1>
+        <div class="card margin">
+        <p>La celebración del Día del Libro se remonta a principios del siglo XX. La historia del libro se hace festiva
+            y surgen actividades literarias en toda España. Hoy, el día 23 de abril se celebra en todo el mundo, el Día
+            del Libro Internacional.</p>
+        <p> Origen del Día del Libro se remonta a 1926. El 23 de abril de 1616 fallecían Cervantes, Shakespeare e
+            Inca Garcilaso de la Vega. También en un 23 de abril nacieron o murieron otros escritores eminentes como
+            Maurice Druon, K. Laxness, Vladimir Nabokov, Josep Pla o Manuel Mejía Vallejo. Por este motivo, esta fecha
+            tan simbólica para la literatura universal fue la escogida por la Conferencia General de la UNESCO para
+            rendir un homenaje mundial al libro y sus autores.</p>
+        <p>El Día del Libro tiene como objetivo fomentar la lectura, el amor por los libros y la cultura en general,
+            así como rendir homenaje a los escritores y su legado literario. En muchos lugares, se organizan eventos y
+            actividades especiales en librerías, bibliotecas y escuelas para celebrar esta fecha. Además, se promueve la
+            venta de libros con descuentos y se realizan intercambios de libros entre amigos y conocidos.
+        </p>
+        <img  src="imagenes/cys.jpg" alt="escritor">
+    </div>
+    <div id="#content"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<footer>
+    <p>Noemí Juan Pérez - IES Bernaldo de Quirós</p>
+</footer>
+</html>

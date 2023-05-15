@@ -8,13 +8,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $("#iniciar").click(function (event) {
-                $('#myModal').modal('show');
-            });
-        });
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./javascript.js">
     </script>
 
 </head>
@@ -34,9 +29,9 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
                     <button type="button" class="btn btn-light" id="iniciar">Iniciar Sesión</button>
-                    <button type="button" class="btn btn-light">Ayuda</button>
+                    <button type="button" class="btn btn-light" id="modo-oscuro">Modo Oscuro</button>
                 </form>
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="nav flex-column">
@@ -56,10 +51,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="concursos.html">Concurso de carteles, poesía, relatos
                                 cortos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="libros.html">Libros más vendidos, mejor valorados y más
-                                premiados</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="cafes.html">Cafés-Librerías</a>
@@ -194,7 +185,7 @@
 
     <footer class="pie">
         <div class="texto-footer space-top">
-            <p>Noemí Juan Pérez - IES Bernaldo de Quirós</p>
+            <p><label id = "tooltip" title = "mxc58627@educastur.es">Noemí Juan Pérez - IES Bernaldo de Quirós</label></p>
         </div>
         <p class="space-top">
             <a href="http://jigsaw.w3.org/css-validator/check/referer">

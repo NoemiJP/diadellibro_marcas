@@ -8,13 +8,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $("#iniciar").click(function (event) {
-                location.href = "login.html";
-            });
-        });
+    <script src="./javascript.js">
     </script>
 
 </head>
@@ -33,9 +27,9 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
                 <button type="button" class="btn btn-light" id="iniciar">Iniciar Sesión</button>
-                <button type="button" class="btn btn-light">Ayuda</button>
+                <button type="button" class="btn btn-light" id="modo-oscuro">Modo Oscuro</button>
             </form>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="nav flex-column">
@@ -54,10 +48,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="concursos.html">Concurso de carteles, poesía, relatos
                             cortos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="libros.html">Libros más vendidos, mejor valorados y más
-                            premiados</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="cafes.html">Cafés-Librerías</a>
@@ -93,44 +83,161 @@
         </a>
 
     </div>
-    <h1>Concurso de carteles, poesía, relatos cortos</h1>
-    <p>Los concursos literarios que buscan fomentar la creatividad y la expresión escrita en diferentes géneros
-        literarios. Algunos de ellos son:</p>
-    <ul>
-        <li>Concurso de Carteles del Día del Libro de Gijón: este concurso convoca a artistas y diseñadores gráficos
-            para la creación de un cartel conmemorativo del Día del Libro. Los carteles ganadores son utilizados
-            para la promoción de las actividades y eventos relacionados con la lectura en la ciudad de Gijón.</li>
-        <li>Concurso de Poesía "Emilio Vega" de Mieres: este concurso está destinado a poetas residentes en Asturias
-            o descendientes de asturianos. El tema y la métrica son libres y el jurado está compuesto por destacados
-            poetas de la región.</li>
-        <li> Concurso de Relatos Cortos "Gijón Imagina" de Gijón: este concurso está destinado a jóvenes entre 12 y
-            30 años y busca fomentar la creatividad y la expresión escrita en el género del relato corto. El tema es
-            libre y los relatos deben tener una extensión máxima de dos folios.</li>
-        <li>Concurso de Microrrelatos de Villaviciosa: este concurso convoca a participantes mayores de 18 años para
-            la creación de microrrelatos con una extensión máxima de 200 palabras. El tema es libre y los
-            microrrelatos ganadores son publicados en una antología.</li>
-        <li> Concurso de Poesía "Gloria Fuertes" de Oviedo: este concurso está destinado a poetas residentes en
-            Asturias y busca homenajear a la poeta española Gloria Fuertes. El tema y la métrica son libres y los
-            poemas ganadores son publicados en una antología.</li>
-    </ul>
-    <div id="#content"></div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
+    <h1>Concurso de carteles, poesía y relatos cortos</h1>
+    <div class="card margin">
+        <div class="card-body">
+            <p>Los concursos literarios que buscan fomentar la creatividad y la expresión escrita en diferentes géneros
+                literarios. Algunos de ellos son:</p>
+            <div class="row">
+                <div class="col">
+                    <div class="card margin">
+                        <div class="card-body">
+                            <h2>Concurso de Carteles del Día del Libro de Gijón.</h2>
+                            <p> Este concurso convoca a artistas y diseñadores gráficos
+                                para la creación de un cartel conmemorativo del Día del Libro. Los carteles ganadores
+                                son utilizados
+                                para la promoción de las actividades y eventos relacionados con la lectura en la ciudad
+                                de Gijón.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card margin">
+                        <div class="card-body">
+                            <h2> Concurso de Poesía "Emilio Vega" de Mieres.</h2>
+                            <p>Este concurso está destinado a poetas residentes en Asturias
+                                o descendientes de asturianos. El tema y la métrica son libres y el jurado está
+                                compuesto por destacados
+                                poetas de la región.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card margin">
+                        <div class="card-body">
+                            <h2>Concurso de Relatos Cortos "Gijón Imagina" de Gijón.</h2>
+                            <p>Este concurso está destinado a jóvenes entre 12 y
+                                30 años y busca fomentar la creatividad y la expresión escrita en el género del relato
+                                corto. El tema es
+                                libre y los relatos deben tener una extensión máxima de dos folios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card margin">
+                        <div class="card-body">
+                            <h2>Concurso de Microrrelatos de Villaviciosa.</h2>
+                            <p>Esste concurso convoca a participantes mayores de 18 años para
+                                la creación de microrrelatos con una extensión máxima de 200 palabras. El tema es libre
+                                y los
+                                microrrelatos ganadores son publicados en una antología.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card margin">
+                        <div class="card-body">
+                            <h2>Concurso de Poesía "Gloria Fuertes" de Oviedo.</h2>
+                            <p>Este concurso está destinado a poetas residentes en
+                                Asturias y busca homenajear a la poeta española Gloria Fuertes. El tema y la métrica son
+                                libres y los
+                                poemas ganadores son publicados en una antología.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="#content"></div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <!-- Modal -->
+        <div id="myModal" class="modal hide log" tabindex="-1" role="dialog" aria-labelledby="myModal"
+            aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form2Example1" class="form-control">
+                        <label class="form-label" for="form2Example1">Correo</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="form2Example2" class="form-control">
+                        <label class="form-label" for="form2Example2">Contraseña</label>
+                    </div>
+
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                        <div class="col d-flex justify-content-center">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked>
+                                <label class="form-check-label" for="form2Example31"> Recuerdame </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <!-- Simple link -->
+                            <a href="#!">¿Olvidaste la contraseña?</a>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="button" data-dismiss="modal" class="btn btn-success btn-block mb-4">Iniciar
+                        Sesión</button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="#!">Register</a></p>
+                        <p>or sign up with:</p>
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer class="pie">
         <div class="texto-footer space-top">
-            <p>Noemí Juan Pérez - IES Bernaldo de Quirós</p>
+            <p><label id="tooltip" title="mxc58627@educastur.es">Noemí Juan Pérez - IES Bernaldo de Quirós</label></p>
         </div>
         <p class="space-top">
             <a href="http://jigsaw.w3.org/css-validator/check/referer">
                 <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
-                    alt="¡CSS Válido!" >
+                    alt="¡CSS Válido!">
             </a>
         </p>
     </footer>

@@ -8,13 +8,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $("#iniciar").click(function (event) {
-                location.href = "login.html";
-            });
-        });
+    <script src="./javascript.js">
     </script>
 
 </head>
@@ -33,9 +27,9 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" id="buscar" type="submit">Buscar</button>
                 <button type="button" class="btn btn-light" id="iniciar">Iniciar Sesión</button>
-                <button type="button" class="btn btn-light">Ayuda</button>
+                <button type="button" class="btn btn-light" id="modo-oscuro">Modo Oscuro</button>
             </form>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="nav flex-column">
@@ -54,10 +48,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="concursos.html">Concurso de carteles, poesía, relatos
                             cortos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="libros.html">Libros más vendidos, mejor valorados y más
-                            premiados</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="cafes.html">Cafés-Librerías</a>
@@ -114,10 +104,7 @@
                 <div class="col">
                     <div class="card margin">
                         <div class="card-body">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.238520092366!2d-5.66017598450596!3d43.539069679125326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367d8225da509d%3A0xd907e3de9ddb2577!2sLa%20habitaci%C3%B3n%20propia!5e0!3m2!1ses!2ses!4v1682885653853!5m2!1ses!2ses"
-                                width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23137.908037604364!2d-5.657987!3d43.53907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367d8225da509d%3A0xd907e3de9ddb2577!2sLa%20habitaci%C3%B3n%20propia!5e0!3m2!1ses!2ses!4v1684081873947!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -138,10 +125,7 @@
                 <div class="col">
                     <div class="card margin">
                         <div class="card-body">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.1624373565965!2d-5.658602923357387!3d43.540655759702034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c7cac3b3bf1%3A0x681354e15b34084!2sLa%20Revoltosa%2C%20Librer%C3%ADa%20Caf%C3%A9!5e0!3m2!1ses!2ses!4v1682886154428!5m2!1ses!2ses"
-                                width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23137.300941667607!2d-5.656028!3d43.540652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c7cac3b3bf1%3A0x681354e15b34084!2sLa%20Revoltosa%2C%20Librer%C3%ADa%20Caf%C3%A9!5e0!3m2!1ses!2ses!4v1684081914520!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -158,9 +142,73 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <!-- Modal -->
+        <div id="myModal" class="modal hide log" tabindex="-1" role="dialog" aria-labelledby="myModal"
+            aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form2Example1" class="form-control">
+                        <label class="form-label" for="form2Example1">Correo</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="form2Example2" class="form-control">
+                        <label class="form-label" for="form2Example2">Contraseña</label>
+                    </div>
+
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                        <div class="col d-flex justify-content-center">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked>
+                                <label class="form-check-label" for="form2Example31"> Recuerdame </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <!-- Simple link -->
+                            <a href="#!">¿Olvidaste la contraseña?</a>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="button" data-dismiss="modal" class="btn btn-success btn-block mb-4">Iniciar
+                        Sesión</button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="#!">Register</a></p>
+                        <p>or sign up with:</p>
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer class="pie">
         <div class="texto-footer space-top">
-            <p>Noemí Juan Pérez - IES Bernaldo de Quirós</p>
+            <p><label id = "tooltip" title = "mxc58627@educastur.es">Noemí Juan Pérez - IES Bernaldo de Quirós</label></p>
         </div>
         <p class="space-top">
             <a href="http://jigsaw.w3.org/css-validator/check/referer">
